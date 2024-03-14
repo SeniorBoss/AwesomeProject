@@ -3,6 +3,11 @@ import { Welcome} from './WelcomePage/Welcome';
 import { WelcomeSec } from './WelcomePage/WelcomeSec';
 import { WelcomeThir } from './WelcomePage/WelcomeThir';
 import { SignUp } from './AUTH/SignUp';
+import { Login } from './AUTH/Login';
+import { Success } from './SuccessFulPage/Success';
+import { OTP } from './SuccessFulPage/OTP';
+import { SuccessNotification } from './SuccessFulPage/SuccessNotification';
+import { Home } from './Home/Home';
 
 export default function App() {
   return (
@@ -10,7 +15,12 @@ export default function App() {
      {/* <Welcome/> */}
      {/* <WelcomeSec/> */}
      {/* <WelcomeThir/> */}
-     <SignUp/>
+     {/* <SignUp/> */}
+     {/* <Login/> */}
+     {/* <Success/> */}
+     {/* <OTP/> */}
+     {/* <SuccessNotification/> */}
+     <Home/>
     </View>
   );
 }
