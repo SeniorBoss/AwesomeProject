@@ -8,6 +8,9 @@ import { Success } from './SuccessFulPage/Success';
 import { OTP } from './SuccessFulPage/OTP';
 import { SuccessNotification } from './SuccessFulPage/SuccessNotification';
 import { Home } from './Home/Home';
+import { SwiftAmount } from './Token/SwiftAmount';
+import { Referral } from './Referral/Referral';
+import { Withdraw } from './WithdrawerPage/Withdraw';
 
 export default function App() {
   return (
@@ -20,7 +23,10 @@ export default function App() {
      {/* <Success/> */}
      {/* <OTP/> */}
      {/* <SuccessNotification/> */}
-     <Home/>
+     {/* <Home/> */}
+     {/* <SwiftAmount/> */}
+     {/* <Referral/> */}
+     <Withdraw/>
     </View>
   );
 }

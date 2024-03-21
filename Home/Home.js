@@ -6,6 +6,7 @@ import { Bonus } from './Bonus';
 import { Inviite } from './Inviite';
 import { Community } from './Community';
 import { Navigate } from './Navigate';
+import { HeaderHome } from './HeaderHome';
 
 export const Home = () => {
   return (
@@ -19,14 +20,7 @@ export const Home = () => {
               <Image source={require('../assets/CoinSwift4B.png')}
                 style={{ position: "absolute", top: 200, left: 0 }} />
            
-
-            <View style={{ flexDirection: "row", justifyContent: "space-between", height: 70, width: "100%", alignItems: "flex-end" }}>
-              <Image source={require('../assets/CoinSwift5.png')} />
-              <View style={{ flexDirection: "row", alignItems: "center", gap: 20,}}>
-                <Ionicons name="notifications" size={24} color="#E45E13" />
-                <FontAwesome5 name="user-alt" size={24} color="#E45E13" />
-              </View>
-            </View>
+            <HeaderHome/>
 
             <TimeSet />
             <Bonus />

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, View, Text } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons';
 
 export const Inviite = () => {
+  const [History, setHistory] =useState(false)
   return (
     <SafeAreaView style={{width: "100%", height: 140,  justifyContent: "center", alignItems: "center"}}>
         <View style={{width: "100%", height: "80%", backgroundColor: "#1A1A1A", borderRadius: 20, flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 15}}>
@@ -18,7 +19,6 @@ export const Inviite = () => {
             <View >
                 <Text style={{color: "#E45E13", width: 80,backgroundColor: "black", height: 40 ,paddingTop: 10, textAlign: "center", justifyContent: "center", borderRadius: 6, borderWidth: 1, borderColor: "#E45E13", }}>Invite Now</Text>
             </View>
-
         </View>
     </SafeAreaView>
   )
