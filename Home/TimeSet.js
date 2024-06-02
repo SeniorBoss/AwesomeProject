@@ -3,10 +3,10 @@ import { View, Text, Image, TouchableOpacity, Alert } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import LottieView from 'lottie-react-native';
+// import LottieView from 'lottie-react-native';
 
 // Ensure the correct path to your Lottie JSON file
-import loadingAnimation from '../assets/loading-animation.json';
+// import loadingAnimation from '../assets/loading-animation.json';
 
 export const TimeSet = () => {
   const [mining, setMining] = useState(false);
@@ -126,22 +126,14 @@ export const TimeSet = () => {
     <View style={{ width: "100%", height: 400, alignItems: "center", paddingTop: 30 }}>
       <View style={{ width: 230, height: 230, backgroundColor: "#26EA2E", borderRadius: 130, justifyContent: "center", alignItems: "center" }}>
         <View style={{ width: 190, height: 190, backgroundColor: "black", borderRadius: 100, alignItems: "center", justifyContent: "center", gap: 7 }}>
-          {loading ? (
-            <LottieView
-              ref={animation}
-              source={loadingAnimation}
-              autoPlay
-              loop
-              style={{ width: 150, height: 150 }}
-            />
-          ) : (
-            <>
+      
+   
               <Text style={{ color: "white", fontSize: 15 }}>{formatTime(timeLeft)}</Text>
               <Text style={{ color: "white", fontSize: 15 }}>Stake Reward</Text>
               <FontAwesome5 name="money-bill" size={20} color="white" />
               <Text style={{ color: "white", fontSize: 30 }}>{minedAmount.toFixed(5)}</Text>
-            </>
-          )}
+          
+        
         </View>
       </View>
 
