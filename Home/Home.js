@@ -10,7 +10,7 @@ import { HeaderHome } from './HeaderHome';
 
 export const Home = () => {
   return (
-    <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0, flex: 1 }}>
+    <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0, flex: 1, backgroundColor: "black" }}>
       <ScrollView>
         <View style={{ width: "100%", alignItems: "center" }}>
           <View style={{ width: "95%", alignItems: "center" }}>

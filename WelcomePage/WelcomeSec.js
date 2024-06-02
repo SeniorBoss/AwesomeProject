@@ -1,9 +1,16 @@
 import React from 'react'
 import { View, Platform, StatusBar,Image, Text, SafeAreaView, TouchableOpacity} from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 export const WelcomeSec = () => {
+    const navigation = useNavigation()
+    
+
+    const handleGetStarted = () =>{
+        navigation.navigate('WelcomeThir')
+    }
   return (
-    <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0, width: "100%", height: "100%", display : "flex", alignItems: "center", gap: 120}} >
+    <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0, width: "100%", height: "100%", display : "flex", alignItems: "center", gap: 120, backgroundColor: "black"}} >
         <View style={{width: 250, height: 250, objectFit: "contain"}}>
             <Image source={require("../assets/CoinSwift2.png")} style={{flex: 1, resizeMode: "contain"}}/>
         </View>
@@ -22,7 +29,9 @@ export const WelcomeSec = () => {
 
             <View style={{width: 250, height: 100,}}>
             <TouchableOpacity
-                style={{width: '100%',  height: 50,backgroundColor: '#E45E13', justifyContent: 'center', alignItems: 'center', borderRadius: 30,}}>
+                style={{width: '100%',  height: 50,backgroundColor: '#E45E13', justifyContent: 'center', alignItems: 'center', borderRadius: 30,}}
+                onPress={handleGetStarted}
+                >
                 <Text style={{color: "white"}}>GET STARTED</Text>
             </TouchableOpacity>
                 

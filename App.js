@@ -11,24 +11,89 @@ import { Home } from './Home/Home';
 import { SwiftAmount } from './Token/SwiftAmount';
 import { Referral } from './Referral/Referral';
 import { Withdraw } from './WithdrawerPage/Withdraw';
+import { NativeModules } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { EmailResetOTP } from './ResetPassword/EmailResetOTP';
+import { ChangeForegetPass } from './ResetPassword/ChangeForegetPass';
+
+
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-   <View style={{ flex : 1,  width:"100%", height : "100vh", backgroundColor: "black", display: "flex",}}>
-     {/* <Welcome/> */}
-     {/* <WelcomeSec/> */}
-     {/* <WelcomeThir/> */}
-     {/* <SignUp/> */}
-     {/* <Login/> */}
-     {/* <Success/> */}
-     {/* <OTP/> */}
-     {/* <SuccessNotification/> */}
-     {/* <Home/> */}
-     {/* <SwiftAmount/> */}
-     {/* <Referral/> */}
-     <Withdraw/>
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator>
+    
+        <Stack.Screen
+        name="welcome"
+        component={Welcome}
+        options={{ headerShown: false }} 
+      />
+
+      <Stack.Screen
+        name="WelcomeSec"
+        component={WelcomeSec}
+        options={{ headerShown: false }} 
+      />
+
+      <Stack.Screen
+        name="WelcomeThir"
+        component={WelcomeThir}
+        options={{ headerShown: false }} 
+      />
+
+       <Stack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{ headerShown: false }} 
+      />
+
+      
+    <Stack.Screen
+        name="Success"
+        component={Success}
+        options={{ headerShown: false }} 
+      /> 
+
+    <Stack.Screen
+        name="OTP"
+        component={OTP}
+        options={{ headerShown: false }} 
+      />
+
+    <Stack.Screen
+        name="SuccessNotification"
+        component={SuccessNotification}
+        options={{ headerShown: false }} 
+      /> 
+
+     <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ headerShown: false }} 
+      /> 
+
+     <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }} 
+      /> 
+
+     <Stack.Screen
+        name="EmailResetOTP"
+        component={EmailResetOTP}
+        options={{ headerShown: false }} 
+      />
+
+   
+     <Stack.Screen
+        name="ChangeForegetPass"
+        component={ChangeForegetPass}
+        options={{ headerShown: false }} 
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
-
-
